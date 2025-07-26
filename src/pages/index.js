@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Button from "../components/Button";
+import ProductCard from "../components/ProductCard";
 
 
 const geistSans = Geist({
@@ -13,25 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-/**
- *             <div className="flex flex-col">
-              <p className="text-white font-[24px]">Safe.</p>
-              <p className="text-white font-[24px]">Secure.</p>
-              <p className="text-white font-[24px]">Seamless.</p>
-            </div>
+const productData = [
+  {
+    title: "CORE", 
+    prices: {starting: "$2.99", renewing: "$11.99"},
+    details: ["1 Website", "100GB SSD Storage", "Unmetered Bandwidth", "Free Email + Free Domain", "Free SSL" , "~20,000 Monthly Visitors", "Developer Support: Python, Node.js, Ruby, Git", "Built-in Security: Malware & DDoS Protection, WAF", "90-Day Money-Back Guarantee", "Live Chat Support"
 
-
-                      <img
-            src="/website-hosting.svg"
-            className="absolute left-[3vw] top-[30vh] lg:top-[10vh] w-[10vw] md:w-[20vw] z-0 pointer-events-none z-0"
-            alt="Web Hosting Graphic"
-          />
-          <img
-            src="/server-graphic.svg"
-            className="absolute right-[-60px] bottom-[-40px] w-[300px] md:w-[400px] z-0 pointer-events-none z-0"
-            alt="Domain Name Graphic"
-          />
- */
+    ]
+  }
+]
 
 export default function Home() {
   return (
@@ -51,7 +42,14 @@ export default function Home() {
                 <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
             </svg>
           </div>
-          
+        </section>
+        <section className="w-[100dvw] mt-16">
+          <div className="flex w-full justify-evenly">
+            <ProductCard data={productData[0]} />
+            <ProductCard data={productData[0]}/>
+            <ProductCard data={productData[0]}/>
+            <ProductCard data={productData[0]}/>
+          </div>
         </section>
 
     </div>

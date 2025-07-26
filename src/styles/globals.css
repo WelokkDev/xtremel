@@ -25,6 +25,12 @@ h1 {
   font-weight: 600;
   line-height: 110%;
 }
+
+h3 {
+  color: white;
+  font-weight: 500;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

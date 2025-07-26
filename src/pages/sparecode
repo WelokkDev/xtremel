@@ -1,0 +1,19 @@
+/**
+ *             <div className="flex flex-col">
+              <p className="text-white font-[24px]">Safe.</p>
+              <p className="text-white font-[24px]">Secure.</p>
+              <p className="text-white font-[24px]">Seamless.</p>
+            </div>
+
+
+                      <img
+            src="/website-hosting.svg"
+            className="absolute left-[3vw] top-[30vh] lg:top-[10vh] w-[10vw] md:w-[20vw] z-0 pointer-events-none z-0"
+            alt="Web Hosting Graphic"
+          />
+          <img
+            src="/server-graphic.svg"
+            className="absolute right-[-60px] bottom-[-40px] w-[300px] md:w-[400px] z-0 pointer-events-none z-0"
+            alt="Domain Name Graphic"
+          />
+ */
