@@ -1,18 +1,8 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import LandingPageHeading from "../components/LandingPageHeading";
 import Button from "../components/Button";
 import ProductCard from "../components/ProductCard";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const productData = [
   {
@@ -31,7 +21,7 @@ export default function Home() {
 
 
           <div className="flex flex-col justify-center items-center min-h-[60vh] gap-12">
-            <h1 className="text-center z-100">Affordable Web Hosting,<br></br>Made Easy.</h1>
+            <LandingPageHeading/>
             <p className="text-[24px] text-center text-blue-900 font-[600] max-w-[45%]">
               Offering safe, secure, and seamless hosting that just works—so you can focus on building, creating, and growing, while we handle the rest.
             </p>
@@ -43,7 +33,12 @@ export default function Home() {
             </svg>
           </div>
         </section>
+        <section className="pl-[5%] pr-[5%] pt-[5%]">
+          <h2 className="text-left ml-auto mr-auto z-100 p-4 pb-16 max-w-[1500px] ">Whether you’re just starting out, scaling up, or managing a high-traffic site, we have hosting solutions tailored to your needs.
+Reliable, secure, and designed to grow with you.</h2>
+        </section>
         <section className="w-[100dvw] mt-16">
+          <h2 className="text-center  z-100 p-4 pb-16">Plans For Your Every Need</h2>
           <div className="flex w-full justify-evenly">
             <ProductCard data={productData[0]} />
             <ProductCard data={productData[0]}/>
