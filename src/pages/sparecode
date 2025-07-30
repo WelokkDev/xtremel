@@ -17,3 +17,13 @@
             alt="Domain Name Graphic"
           />
  */
+            <h2 className="text-left z-100 p-4 pb-16">
+              Whether you’re just starting out, scaling up, or managing a high-traffic site, we have hosting solutions tailored to your needs.
+  
+            </h2>
+
+            <h2 className="text-center  z-100 p-4 pb-16">Plans For Your Every Need</h2>
+
+
+            #51a2ff = LIGHT BLUE
+            #1C398E = dark blue

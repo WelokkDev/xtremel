@@ -3,7 +3,7 @@ export default function ProductCard({ data }) {
     return (
         <div className="w-[20vw] flex flex-col gap-4">
             <div className="bg-blue-900 min-h-14 rounded-md flex items-center justify-center">
-                <h3 className="text-[24px]">{data.title}</h3>
+                <h3 className="text-[24px] text-white">{data.title}</h3>
             </div>
             <div className="bg-blue-400 min-h-[20vh] rounded-md">
                 <div className="flex flex-col pl-12 pr-12 pt-8 pb-8">

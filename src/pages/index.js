@@ -2,6 +2,8 @@ import Image from "next/image";
 import LandingPageHeading from "../components/LandingPageHeading";
 import Button from "../components/Button";
 import ProductCard from "../components/ProductCard";
+import HeaderTag from "../components/HeaderTag";
+import FeatureContainer from "../components/FeatureContainer";
 
 
 const productData = [
@@ -26,24 +28,109 @@ export default function Home() {
               Offering safe, secure, and seamless hosting that just works—so you can focus on building, creating, and growing, while we handle the rest.
             </p>
             <Button>View Hosting Options</Button>
+
           </div>
-          <div class="custom-shape-divider-bottom-1753373327">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-            </svg>
+          <div class="custom-shape-divider-bottom-1753663138">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+              </svg>
           </div>
         </section>
         <section className="pl-[5%] pr-[5%] pt-[5%]">
-          <h2 className="text-left ml-auto mr-auto z-100 p-4 pb-16 max-w-[1500px] ">Whether you’re just starting out, scaling up, or managing a high-traffic site, we have hosting solutions tailored to your needs.
-Reliable, secure, and designed to grow with you.</h2>
+          <div className="flex justify-center items-center flex-col">
+            <HeaderTag variant="color">FEATURES</HeaderTag>
+            <h2 className="text-center z-100 p-4 pb-16">
+              Why We're Worth It
+
+            </h2>
+
+     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl w-full">
+      {[
+        {
+          title: "Fast Setup",
+          description: "Get started in under 5 minutes with zero configuration.",
+          icon: (
+            <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m4 4V9a4 4 0 00-8 0v7" />
+            </svg>
+          )
+        },
+        {
+          title: "Reliable",
+          description: "Built with modern, battle-tested technologies.",
+          icon: (
+            <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          )
+        },
+        {
+          title: "Scalable",
+          description: "Handles growth without a hitch.",
+          icon: (
+            <svg className="w-10 h-10 text-purple-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )
+        },
+        {
+          title: "Secure",
+          description: "Security is baked into every layer.",
+          icon: (
+            <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c1.105 0 2-.672 2-1.5S13.105 8 12 8s-2 .672-2 1.5S10.895 11 12 11z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 11v4m0 4h.01" />
+            </svg>
+          )
+        },
+        {
+          title: "Customizable",
+          description: "Tailor it to your team’s workflow.",
+          icon: (
+            <svg className="w-10 h-10 text-yellow-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+          )
+        },
+        {
+          title: "Supportive",
+          description: "We’ve got your back when it matters.",
+          icon: (
+            <svg className="w-10 h-10 text-indigo-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-1.414 1.414m0 0A9 9 0 105.636 18.364 9 9 0 0016.95 7.05z" />
+            </svg>
+          )
+        },
+      ].map((item, i) => (
+        <FeatureContainer title={item.title} description={item.description} icon={item.icon} key={i}/>
+      ))}
+    </div>
+
+          </div>
+          
         </section>
-        <section className="w-[100dvw] mt-16">
-          <h2 className="text-center  z-100 p-4 pb-16">Plans For Your Every Need</h2>
+
+        <section className="pl-[5%] pr-[5%] pt-[5%] flex justify-center items-center flex-col">
+          <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
+          <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
           <div className="flex w-full justify-evenly">
             <ProductCard data={productData[0]} />
             <ProductCard data={productData[0]}/>
             <ProductCard data={productData[0]}/>
             <ProductCard data={productData[0]}/>
+          </div>
+        </section>
+
+        <section className="pl-[5%] pr-[5%] pt-[5%]">
+          <div className="flex flex-col justify-center items-center">
+            <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
+            <h2 className="text-center z-100 p-4 pb-16">
+              How it Works
+
+            </h2>
+            <p>
+
+            </p>
           </div>
         </section>
 

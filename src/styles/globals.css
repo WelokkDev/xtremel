@@ -20,20 +20,22 @@
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 80px;
   color: white;
   font-weight: 600;
   line-height: 110%;
 }
 
+
 h2 {
-  font-size: 42px;
-  color: #51a2ff;
+  font-size: 62px;
+  color: #222222;
   font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2px;
 }
 
 h3 {
-  color: white;
   font-weight: 500;
 }
 
@@ -47,8 +49,11 @@ body {
   background-color: #51a2ff;
 }
 
+.button-color {
+  background-color: rgba(2, 61, 226, 0.067)
+}
 
-.custom-shape-divider-bottom-1753373327 {
+.custom-shape-divider-bottom-1753663138 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -58,14 +63,16 @@ body {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1753373327 svg {
+.custom-shape-divider-bottom-1753663138 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 73px;
+    height: 64px;
     transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1753373327 .shape-fill {
+
+
+.custom-shape-divider-bottom-1753663138 .shape-fill {
     fill: #FFFFFF;
 }
