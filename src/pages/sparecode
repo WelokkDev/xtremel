@@ -27,3 +27,5 @@
 
             #51a2ff = LIGHT BLUE
             #1C398E = dark blue
+
+            ALTERNATE LIGHT BLUE FOR HEADER TAG = rgba(81, 162, 255, 0.067)
