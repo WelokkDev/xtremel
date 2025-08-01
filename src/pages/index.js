@@ -1,22 +1,13 @@
 import Image from "next/image";
 import LandingPageHeading from "../components/LandingPageHeading";
 import Button from "../components/Button";
-import ProductCard from "../components/ProductCard";
 import HeaderTag from "../components/HeaderTag";
-import FeatureContainer from "../components/FeatureContainer";
 import FeatureGrid from "../components/FeatureGrid";
+import ProductGrid from "../components/ProductGrid";
 import Timeline from "../components/Timeline";
 
 
-const productData = [
-  {
-    title: "CORE", 
-    prices: {starting: "$2.99", renewing: "$11.99"},
-    details: ["1 Website", "100GB SSD Storage", "Unmetered Bandwidth", "Free Email + Free Domain", "Free SSL" , "~20,000 Monthly Visitors", "Developer Support: Python, Node.js, Ruby, Git", "Built-in Security: Malware & DDoS Protection, WAF", "90-Day Money-Back Guarantee", "Live Chat Support"
 
-    ]
-  }
-]
 
 export default function Home() {
   return (
@@ -54,27 +45,16 @@ export default function Home() {
         <section className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col">
           <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
           <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
-          <div className="flex w-full justify-evenly">
-            <ProductCard data={productData[0]} />
-            <ProductCard data={productData[0]}/>
-            <ProductCard data={productData[0]}/>
-            <ProductCard data={productData[0]}/>
-          </div>
+          <ProductGrid />
         </section>
 
         <section className="pl-[5%] pr-[5%] pt-[10%] pb-[10%]">
           <div className="flex flex-col justify-center items-center">
-            <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
+            <HeaderTag variant="color">STEPS</HeaderTag>
             <h2 className="text-center z-100 p-4 pb-16">
               How it Works
-
             </h2>
-            
             <Timeline />
-            
-
-
-
           </div>
         </section>
 
