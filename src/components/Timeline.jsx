@@ -24,8 +24,8 @@ export default function Timeline({}) {
                     {title: "Create Your Account", description: "Sign up with your email and password, fast, securely, and hassle-free."},
                     {title: "Make Payment", description: "Complete your order with secure payment and get access to client portal."},
                     {title: "Launch Your Website", description: "Log in to your dashboard, upload your content, and go live in minutes."},
-                  ].map((step) => (
-                    <div className="max-w-[18%] relative z-10  h-10 flex flex-col gap-1 ">
+                  ].map((step, i) => (
+                    <div key={i} className="max-w-[18%] relative z-10  h-10 flex flex-col gap-1 ">
                       <h3 className="text-[20px] text-center">{step.title}</h3>
                       <p className="text-center text-gray-600">{step.description}</p>
                     </div>
