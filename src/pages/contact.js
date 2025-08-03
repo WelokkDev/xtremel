@@ -1,7 +1,13 @@
 import TextField from "../components/TextField";
+import Button from "../components/Button"
 import { useState } from 'react';
 
 export default function Contact() {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
 
     return (    
         <div>
@@ -24,17 +30,29 @@ export default function Contact() {
             </section>
             <section className="flex justify-center items-center flex-col mt-[5%] mb-[5%]">
                 <div className="flex justify-center items-center">
-                    <h2>General Inquiries: </h2>
-                    <p className="text-[56px] ml-4"> info@xtremel.com</p>
+                    <h2 className="!text-blue-400">General Inquiries: </h2>
+                    <p className="text-[56px] ml-4 font-[600]"> info@xtremel.com</p>
                 </div>
-                <form className="w-[50%]">
-                    <div className="flex justify-center items-center gap-10">
-                        <TextField name="ffname" value="First Name"/>
-                        <TextField name="flname" value="Last Name"/>
+                <form className="w-[65%] flex flex-col gap-4 mt-8">
+                    <div className="flex justify-center items-center gap-6">
+                        <TextField name="ffname" value={firstName} onChange={(e) => setFirstName(e.target.value)}>
+                            First Name
+                        </TextField>
+                        <TextField name="flname" value={lastName} onChange={(e) => setLastName(e.target.value)}>
+                            Last Name
+                        </TextField>
                     </div>
-                    <TextField value="Email Address"/>
-                    <TextField value="Subject"/>
-                    <textarea placeholder="Message"></textarea>
+                    <TextField name="email" value={email} onChange={(e) => setEmail(e.target.value)}>
+                        Email Address
+                    </TextField>
+                    <TextField name="subject" value={subject} onChange={(e) => setSubject(e.target.value)}>
+                        Subject
+                    </TextField>
+                    <textarea rows={3} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}
+                        className={`border border-2 border-gray-300 rounded-md px-2 py-2 text-[24px]
+                        focus:border-blue-400 focus:border-2 focus:outline-none w-full`}>
+                    </textarea>
+                    <Button variant="blue">Submit</Button>
                 </form>
 
             </section>

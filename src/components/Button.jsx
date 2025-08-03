@@ -5,6 +5,7 @@ export default function Button({ children, variant="light" }) {
     const variantStyles = {
         light: `bg-white text-blue-400  border-white   
     hover:bg-blue-400 hover:text-white `,
+        blue: `bg-blue-400 text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500`,
         dark: `bg-blue-900 text-white border-blue-900 hover:bg-blue-950 hover:border-blue-950`
     }
 
