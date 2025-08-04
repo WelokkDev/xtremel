@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import HeaderTag from "../components/HeaderTag";
 import FeatureGrid from "../components/FeatureGrid";
 import ProductGrid from "../components/ProductGrid";
+import ProductGrids from "../components/ProductGrids";
 import Timeline from "../components/Timeline";
 
 
@@ -46,6 +47,11 @@ export default function Home() {
           <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
           <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
           <ProductGrid />
+        </section>
+        <section className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col">
+          <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
+          <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
+          <ProductGrids />
         </section>
 
         <section className="pl-[5%] pr-[5%] pt-[10%] pb-[10%]">
