@@ -2,7 +2,7 @@ export default function Timeline({}) {
 
 
     return (
-        <div className="w-full py-16 bg-white md:hidden">
+        <div className="w-full pb-4 bg-white md:hidden">
             <div className="relative flex flex-col gap-12 max-w-[90%] mx-auto">
 
                 {/* Vertical line */}

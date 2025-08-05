@@ -15,7 +15,7 @@ export default function Contact() {
             <section className="min-h-[60vh] bg-blue-400 relative pt-16 pb-16 flex justify-center items-center">
                 <div className="flex flex-col justify-center items-center min-h-[60vh] gap-12">
                     <h1>Contact Us</h1>
-                    <p className="text-[24px] text-center text-blue-900 font-[600] max-w-[50%]">
+                    <p className="text-[24px] text-center text-blue-900 font-[600] max-w-[50%] max-w-[45%] max-xl:text-[16px] max-xl:max-w-[85%]">
                         We're here to make things easy. Whether you're ready to launch your next project, 
                         have questions about our plans, or just want to explore what's possible, we’re happy to help. 
                         Reach out through the form below and our team will get back to you promptly.
@@ -29,11 +29,13 @@ export default function Contact() {
                 </div>
             </section>
             <section className="flex justify-center items-center flex-col mt-[5%] mb-[5%]">
-                <div className="flex justify-center items-center">
-                    <h2 className="!text-blue-400">General Inquiries: </h2>
-                    <p className="text-[56px] ml-4 font-[600]"> info@xtremel.com</p>
-                </div>
-                <form className="w-[65%] flex flex-col gap-4 mt-8">
+                <div className="flex flex-col justify-center items-center max-w-max">
+                    <h2 className="!text-blue-400 text-center max-lg:!pb-2">
+                        General Inquiries: <span className="text-black">info@xtremel.com</span>
+                    </h2>
+                    
+                
+                <form className=" flex flex-col gap-4 lg:mt-8 w-[100%] max-lg:p-4">
                     <div className="flex justify-center items-center gap-6">
                         <TextField name="ffname" value={firstName} onChange={(e) => setFirstName(e.target.value)}>
                             First Name
@@ -54,7 +56,7 @@ export default function Contact() {
                     </textarea>
                     <Button variant="blue">Submit</Button>
                 </form>
-
+                </div>
             </section>
         </div>
     )

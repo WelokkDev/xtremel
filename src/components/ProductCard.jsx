@@ -11,7 +11,7 @@ export default function ProductCard({ data, mobile=false }) {
                         <span className="bg-yellow-200 text-black text-[14px] px-[5.5px] font-[500]">SAVE {data.prices.saving}</span>
                         <span className="text-[14px] text-black line-through ml-2">{data.prices.original}</span>
                     </p>
-                    <p className="mt-2 mb-4  text-left font-black text-black  text-[40px] xl:text-4xl 2xl:text-[53px]">
+                    <p className="mt-2 mb-5  text-left font-black text-black  text-[40px] xl:text-4xl 2xl:text-[53px]">
                         {data.prices.starting}/mo
                     </p>
                     <Button variant="blue">Buy Now</Button>
