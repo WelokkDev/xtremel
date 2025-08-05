@@ -15,7 +15,7 @@ export default function Heading() {
         ]}
         wrapper="span"
         speed={25}
-        style={{ fontSize: '72px', display: 'inline-block'}}
+        style={{ display: 'inline-block'}}
         repeat={Infinity}
         />
     </h1>

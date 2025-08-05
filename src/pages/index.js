@@ -4,15 +4,41 @@ import Button from "../components/Button";
 import HeaderTag from "../components/HeaderTag";
 import FeatureGrid from "../components/FeatureGrid";
 import ProductGrid from "../components/ProductGrid";
-import ProductGrids from "../components/ProductGrids";
+import ProductCarousel from "../components/ProductCarousel"
 import Timeline from "../components/Timeline";
+import MobileTimeline from "../components/MobileTimeline";
+
+import { useEffect, useState } from "react";
 
 
 
 
 export default function Home() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const docWidth = document.documentElement.offsetWidth;
+    [...document.querySelectorAll('*')].forEach(el => {
+      if (el.offsetWidth > docWidth) {
+        console.log('Wide element:', el, el.offsetWidth);
+      }
+    });
+
+    const checkMobile = () => {
+      if (typeof window !== "undefined") {
+        const width = window.innerWidth;
+        setIsMobile(width <= 1000); 
+      }
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+
+  }, []);
+
   return (
-    <div>
+    <div >
         <section className="min-h-[60vh] bg-blue-400 relative pt-16 pb-16 flex justify-center items-center">
 
 
@@ -30,6 +56,8 @@ export default function Home() {
               </svg>
           </div>
         </section>
+
+        
         <section className="pl-[5%] pr-[5%] pt-[5%]">
           <div className="flex justify-center items-center flex-col">
             <HeaderTag variant="color">FEATURES</HeaderTag>
@@ -46,12 +74,8 @@ export default function Home() {
         <section className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col">
           <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
           <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
-          <ProductGrid />
-        </section>
-        <section className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col">
-          <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
-          <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
-          <ProductGrids />
+          { isMobile ? <ProductCarousel/> : <ProductGrid/>}
+          
         </section>
 
         <section className="pl-[5%] pr-[5%] pt-[10%] pb-[10%]">
@@ -60,7 +84,7 @@ export default function Home() {
             <h2 className="text-center z-100 p-4 pb-16">
               How it Works
             </h2>
-            <Timeline />
+            { isMobile ? <MobileTimeline /> : <Timeline />}
           </div>
         </section>
 

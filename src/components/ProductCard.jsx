@@ -1,25 +1,28 @@
 import Button from "./Button";
-export default function ProductCard({ data }) {
+export default function ProductCard({ data, mobile=false }) {
+
+    const cardWidth = mobile == false ? `w-[20vw]` : `w-[90%]`
+
     return (
-        <div className="w-[20vw] flex flex-col gap-4">
-            <div className="bg-blue-900 min-h-14 rounded-md flex items-center justify-center">
-                <h3 className="text-[24px] text-white">{data.title}</h3>
-            </div>
-            <div className="bg-blue-400 min-h-[20vh] rounded-md">
+        <div className={`${cardWidth} flex flex-col gap-4 border border-2 border-stone-300 rounded-xl`}>
                 <div className="flex flex-col pl-12 pr-12 pt-8 pb-8">
-                    <p className="text-center text-white text-[18px]">Starting at</p>
-                    <p className="text-fancy-shadow text-center font-black text-white text-[40px] xl:text-4xl 2xl:text-[53px]">{data.prices.starting}/mo</p>
-                    <p className="text-center text-white text-[18px] mb-4">Renews at {data.prices.renewing}/mo</p>
-                    <Button variant="dark">Select</Button>
+                    <h3 className="text-[26px] text-black">{data.title}</h3>
+                    <p className="text-left text-black text-[18px] mt-8">
+                        <span className="bg-yellow-200 text-black text-[14px] px-[5.5px] font-[500]">SAVE {data.prices.saving}</span>
+                        <span className="text-[14px] text-black line-through ml-2">{data.prices.original}</span>
+                    </p>
+                    <p className="mt-2 mb-4  text-left font-black text-black  text-[40px] xl:text-4xl 2xl:text-[53px]">
+                        {data.prices.starting}/mo
+                    </p>
+                    <Button variant="blue">Buy Now</Button>
                 </div>
-                <div className="  border-blue-950/30">
+                <div className="pr-12 pl-12 pb-4">
                     {data.details.map((detail) => (
-                        <p key={detail} className="text-center text-[14px] font-medium text-white border-t border-blue-950/30 py-2">
+                        <p key={detail} className="text-left text-[14px] font-medium text-black py-2">
                             {detail}
                         </p>
                     ))}
                 </div>
-            </div>
         </div>
     )
 }
