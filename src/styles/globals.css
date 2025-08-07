@@ -31,7 +31,9 @@ body {
   
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .text-fancy-shadow {
   background-color: #51a2ff;

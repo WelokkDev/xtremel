@@ -1,5 +1,5 @@
 import Button from "./Button";
-export default function ProductCard({ data, mobile=false }) {
+export default function ProductCard({ data, mobile=false, icons }) {
 
     const cardWidth = mobile == false ? `w-[20vw]` : `w-[90%]`
 
@@ -14,12 +14,12 @@ export default function ProductCard({ data, mobile=false }) {
                     <p className="mt-2 mb-5  text-left font-black text-black  text-[40px] xl:text-4xl 2xl:text-[53px]">
                         {data.prices.starting}/mo
                     </p>
-                    <Button variant="blue">Buy Now</Button>
+                    <Button variant="blue" path={data.link}>Buy Now</Button>
                 </div>
                 <div className="pr-12 pl-12 pb-4">
-                    {data.details.map((detail) => (
-                        <p key={detail} className="text-left text-[14px] font-medium text-black py-2">
-                            {detail}
+                    {data.details.map((detail, index) => (
+                        <p key={index} className="text-left text-[14px] font-medium text-black py-2 flex items-start gap-2">
+                            {icons[index]}{detail}
                         </p>
                     ))}
                 </div>

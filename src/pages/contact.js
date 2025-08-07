@@ -1,13 +1,7 @@
 import TextField from "../components/TextField";
 import Button from "../components/Button"
-import { useState } from 'react';
 
 export default function Contact() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
 
     return (    
         <div>
@@ -35,24 +29,24 @@ export default function Contact() {
                     </h2>
                     
                 
-                <form className=" flex flex-col gap-4 lg:mt-8 w-[100%] max-lg:p-4">
+                <form  method="POST" action="/contact-form.php" className=" flex flex-col gap-4 lg:mt-8 w-[100%] max-lg:p-4">
                     <div className="flex justify-center items-center gap-6">
-                        <TextField name="ffname" value={firstName} onChange={(e) => setFirstName(e.target.value)}>
+                        <TextField name="ffname" >
                             First Name
                         </TextField>
-                        <TextField name="flname" value={lastName} onChange={(e) => setLastName(e.target.value)}>
+                        <TextField name="flname">
                             Last Name
                         </TextField>
                     </div>
-                    <TextField name="email" value={email} onChange={(e) => setEmail(e.target.value)}>
+                    <TextField name="email" >
                         Email Address
                     </TextField>
-                    <TextField name="subject" value={subject} onChange={(e) => setSubject(e.target.value)}>
+                    <TextField name="subject">
                         Subject
                     </TextField>
-                    <textarea rows={3} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}
+                    <textarea rows={4} placeholder="Message"
                         className={`border border-2 border-gray-300 rounded-md px-2 py-2 text-[24px]
-                        focus:border-blue-400 focus:border-2 focus:outline-none w-full`}>
+                        focus:border-blue-400 focus:border-2 focus:outline-none w-full max-lg:text-[16px]`}>
                     </textarea>
                     <Button variant="blue">Submit</Button>
                 </form>

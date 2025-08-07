@@ -14,7 +14,7 @@ export default function Navbar() {
                     <Link href="/contact">Contact</Link>
                 </li>
                 <li key="account">
-                    <Link href="/clients">Account</Link>
+                    <Link href="/clients/index.php?rp=/login">Account</Link>
                 </li>
             </ul>
         </nav>

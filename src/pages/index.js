@@ -42,12 +42,13 @@ export default function Home() {
         <section className="min-h-[60vh] bg-blue-400 relative pt-16 pb-16 flex justify-center items-center">
 
 
-          <div className="flex flex-col justify-center items-center min-h-[60vh] gap-12">
+          <div className="flex flex-col justify-center items-center min-h-[60vh] gap-12 pb-4">
             <LandingPageHeading/>
-            <p className="text-[24px] text-center text-blue-900 font-[600] max-w-[45%] max-xl:text-[16px] max-xl:max-w-[85%]">
-              Offering safe, secure, and seamless hosting that just works—so you can focus on building, creating, and growing, while we handle the rest.
+            <p className="text-[24px] text-center text-blue-950 font-[600] max-w-[40%] max-xl:text-[16px] max-xl:max-w-[85%] max-2xl:max-w-[55%]">
+              Tired of clunky dashboards, hidden fees, and unresponsive support?
+              We offer real value with full cPanel access, hands-on support, and blazing speed—all at a fair price.
             </p>
-            <Button>View Hosting Options</Button>
+            <Button path="#product-section">View Hosting Options</Button>
 
           </div>
           <div class="custom-shape-divider-bottom-1753663138">
@@ -71,7 +72,7 @@ export default function Home() {
           
         </section>
 
-        <section className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col mobile-section">
+        <section id="product-section" className="pl-[5%] pr-[5%] pt-[10%] flex justify-center items-center flex-col mobile-section">
           <HeaderTag variant="color">HOSTING PLAN</HeaderTag>
           <h2 className="text-center mr-auto ml-auto max-w-[650px] z-100 p-4 pb-16">Find the Right <span className="text-blue-400">Hosting Plan</span> for You</h2>
           { isMobile ? <ProductCarousel/> : <ProductGrid/>}
